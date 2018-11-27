@@ -15,8 +15,8 @@
         app:tabIndicatorColor="@color/colorPrimary"
         app:tabIndicatorHeight="3dp"
         app:tabMode="fixed"
+        app:tabMaxWidth="0dp"
         app:tabGravity="fill"
-        app:tabMinWidth="20dp"
         app:tabSelectedTextColor="@color/colorAccent"
         app:tabTextColor="#5a5a5a" />
 

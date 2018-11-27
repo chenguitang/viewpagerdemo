@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.posin.viewpager.fragment.ViewPagerFragment;
+import com.posin.viewpager.fragment.ViewPagerFragment2;
 
 /**
  * FileName: ViewpagerAdapter
@@ -22,7 +23,8 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-
+        if (position==1)
+            return ViewPagerFragment2.newInstance(mPageTitle[position]);
         return ViewPagerFragment.newInstance(mPageTitle[position]);
     }
 
@@ -33,7 +35,7 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return super.getPageTitle(position);
+        return mPageTitle[position];
     }
 
 }
